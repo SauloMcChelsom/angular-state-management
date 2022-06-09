@@ -1,0 +1,13 @@
+npm install bootstrap
+npm install path
+npm install browser-detect
+npm install express 
+npm install ngx-currency
+npm install @angular/material @angular/cdk
+npm install path
+
+npm install --save @ngrx/effects@13.2.0 --force
+npm install --save @ngrx/entity@13.2.0 --force
+npm install --save @ngrx/router-store@13.2.0 --force
+npm install --save @ngrx/store@13.2.0 --force
+npm install --save @ngrx/store-devtools@13.2.0 --force

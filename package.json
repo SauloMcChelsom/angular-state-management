@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "postinstall": "ng build",
+    "postinstall": "npm install --force && ng build",
     "build": "ng build",
     "dev": "ng serve --open --host=0.0.0.0 --port=5999 --disable-host-check",
     "test": "ng test"
@@ -25,10 +25,10 @@
     "@angular/platform-browser": "^14.0.1",
     "@angular/platform-browser-dynamic": "^14.0.1",
     "@angular/router": "^14.0.1",
-    "@ngrx/store": "^13.2.0",
-    "@ngrx/entity": "^13.2.0",
     "@ngrx/effects": "^13.2.0",
+    "@ngrx/entity": "^13.2.0",
     "@ngrx/router-store": "^13.2.0",
+    "@ngrx/store": "^13.2.0",
     "@ngrx/store-devtools": "^13.2.0",
     "bootstrap": "^5.1.3",
     "browser-detect": "^0.2.28",
