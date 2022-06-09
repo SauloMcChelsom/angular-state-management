@@ -8,6 +8,7 @@ import { CreateCommentModule } from '@app/shared/comment/create-comment/create-c
 import { ListCommentModule } from '@app/shared/comment/list-comment/list-comment.module'
 import { EditCommentModule } from '@app/shared/comment/edit-comment/edit-comment.module'
 import { DetailCommentModule } from '@app/shared/comment/detail-comment/detail-comment.module'
+import { ZippyBasicModule } from '@app/shared/app-zippy-basic/zippy-basic.module'
 
 import { BookStoreEffects } from './store/index.effects';
 import { bookReducer } from './store/index.reducers'
@@ -33,6 +34,7 @@ const Modules = [
   ListCommentModule,
   EditCommentModule,
   DetailCommentModule,
+  ZippyBasicModule
 ]
 
 @NgModule({

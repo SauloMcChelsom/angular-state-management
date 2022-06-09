@@ -1,27 +1,7 @@
-# Asm
+canActivate é usado para impedir que usuários não autorizados acessem determinadas rotas. Consulte os documentos para obter mais informações.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+canLoad é usado para evitar que o aplicativo carregue módulos inteiros lentamente se o usuário não estiver autorizado a fazê-lo.
 
-## Development server
+CanActivate - Decide se uma rota pode ser ativada, este guarda pode não ser o melhor caminho para módulos de recursos que são carregados com preguiça, pois esse guarda sempre carregará o módulo na memória, mesmo se o guarda retornar falso, o que significa que o usuário não está autorizado a acessar o percurso.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+CanLoad - Decide se um módulo pode ser carregado lentamente, Controla se uma rota pode ser carregada. Isso se torna útil para módulos de recursos que são carregados lentamente. Eles nem carregarão se o guarda retornar falso.
