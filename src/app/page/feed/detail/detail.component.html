@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div style="padding-top: 15px; padding-bottom: 15px;">
+      <button [routerLink]="['/feed']" mat-fab color="secundary">
+        <mat-icon>west</mat-icon>
+      </button>
+    </div>
+    <div class="col-12 col-md-12 col-lg-12 card-content-center mr-b">
+      <asm-detail-comment [comment$]="comment"></asm-detail-comment>
+    </div>
+  </div>
+</div>

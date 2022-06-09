@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  api_nestjs_setup:'https://nestjs-setup.herokuapp.com'
 };

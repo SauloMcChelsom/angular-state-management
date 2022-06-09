@@ -1,0 +1,14 @@
+<mat-card  class="example-card">               
+  <mat-card-content>
+    <form [formGroup]="form">
+      <div  class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">what are you thinking? </label>
+        <textarea formControlName="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="col-12 col-md-6 col-lg-12 d-inline-flex">
+        <button mat-raised-button color="primary" style="margin-right: 5px;" (click)="createNewComment()" [disabled]="!form.valid">Post</button>
+        <button mat-raised-button color="primary" (click)="clean()" [disabled]="!form.valid">Clean</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

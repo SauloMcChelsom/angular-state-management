@@ -1,0 +1,30 @@
+<div *ngFor="let show of comments$" style="padding-top: 5px; padding-bottom: 5px;">
+    <mat-card  class="example-card">
+        <mat-card-header style="display: flex;justify-content: flex-end;">
+            <div class="col-12 col-md-6 col-lg-4 mr-b card-header-opcao">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="detailButton(show)">
+                    <mat-icon>remove_red_eye</mat-icon>
+                    <span>Detalhe</span>
+                </button>
+                <button mat-menu-item (click)="editButton(show)">
+                    <mat-icon>edit</mat-icon>
+                    <span>Editar</span>
+                </button>
+                <button mat-menu-item (click)="deleteButton(show)">
+                    <mat-icon>delete</mat-icon>
+                    <span>Deletar</span>
+                </button>
+                </mat-menu>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{ show.comment}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
