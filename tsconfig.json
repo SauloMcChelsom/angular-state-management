@@ -8,6 +8,7 @@
     "strictPropertyInitialization": false,/* Property '...' has no initializer and is not definitely assigned in the constructor*/
     "noImplicitAny": false,/*Parameter 'user_id' implicitly has an 'any' type.*/
     "strict": true,
+    "strictNullChecks": false,/*object is possibly 'null'*/
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

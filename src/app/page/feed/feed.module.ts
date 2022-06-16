@@ -16,8 +16,9 @@ import { Service } from './store/index.service'
 
 import { ListComponent } from './list/list.component'
 import { CreateComponent } from './create/create.component'
-import { EditComponent } from './edit/edit.component'
-import { DetailComponent } from './detail/detail.component'
+
+import { EditModule } from './edit/edit.module'
+import { DetailModule } from './detail/detail.module'
 
 import { FeedComponent } from './feed.component'
 import { FeedRoute } from './feed.route'
@@ -26,15 +27,16 @@ const Components = [
   FeedComponent,
   ListComponent,
   CreateComponent,
-  EditComponent,
-  DetailComponent,
 ]
+
 const Modules = [
   CreateCommentModule,
   ListCommentModule,
   EditCommentModule,
   DetailCommentModule,
-  ZippyBasicModule
+  ZippyBasicModule,
+  DetailModule,
+  EditModule,
 ]
 
 @NgModule({
@@ -44,8 +46,8 @@ const Modules = [
   imports: [
     CommonModule,
     AngularMaterialModule,
-    ...Modules,
     FeedRoute,
+    ...Modules,
     StoreModule.forFeature('bookStore', bookReducer),
     EffectsModule.forFeature([BookStoreEffects])
   ],

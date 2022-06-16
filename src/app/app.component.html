@@ -24,9 +24,14 @@
         <!----------------------MENU-------------------------->
         <!----><mat-sidenav #sidenav="matSidenav" class="mat-elevation-z1 menu-theme" style="border-right: solid 0px">
         <!---->
-        <!---->    <button routerLink="feed" routerLinkActive="active" mat-button class="menu-button button-menu">
+        <!---->    <button routerLink="feed" routerLinkActive="active" (click)="sideNavClose()" mat-button class="menu-button button-menu">
         <!---->        <mat-icon class="material-icons-round icons-menu">home</mat-icon>
         <!---->        <span class="texts-menu">Feed</span>
+        <!---->    </button>
+        <!---->
+        <!---->    <button routerLink="login" routerLinkActive="active" (click)="sideNavClose()" mat-button class="menu-button button-menu">
+        <!---->        <mat-icon class="material-icons-round icons-menu">home</mat-icon>
+        <!---->        <span class="texts-menu">Login</span>
         <!---->    </button>
         <!---->
         <!-- 
@@ -56,14 +61,14 @@
                     </button>
         -->
         <!---->       
-        <!---->    <button routerLink="tutorial" routerLinkActive="active" mat-button class="menu-button button-menu">
+        <!---->    <button routerLink="tutorial" routerLinkActive="active" (click)="sideNavClose()" mat-button class="menu-button button-menu">
         <!---->        <mat-icon class="material-icons-round icons-menu">home</mat-icon>
         <!---->        <span class="texts-menu">Tutorial</span>
         <!---->    </button>
         <!---->
         <!---->    <mat-divider></mat-divider>
         <!---->
-        <!---->    <button mat-button class="menu-button button-menu">
+        <!---->    <button mat-button class="menu-button button-menu" (click)="sideNavClose()">
         <!---->        <mat-icon class="icons-menu">help</mat-icon>
         <!---->        <span class="texts-menu">Help</span>
         <!---->    </button>

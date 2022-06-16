@@ -1,4 +1,4 @@
-canActivate é usado para impedir que usuários não autorizados acessem determinadas rotas. Consulte os documentos para obter mais informações.
+canActivate é usado para impedir que usuários não autorizados acessem determinadas rotas.
 
 canLoad é usado para evitar que o aplicativo carregue módulos inteiros lentamente se o usuário não estiver autorizado a fazê-lo.
 

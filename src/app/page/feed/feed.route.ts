@@ -2,18 +2,28 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FeedComponent } from './feed.component';
-import { DetailComponent } from './detail/detail.component';
-import { EditComponent } from './edit/edit.component';
+import { AuthGuard } from '@app/core/guards/auth-guard.service';
+
 
 const routes: Routes = [
   {
-    path: '', component: FeedComponent
+    path: '', 
+    component: FeedComponent,
   },
-  { 
-    path: 'detail', component: DetailComponent 
+  {
+    path: 'detail',
+    loadChildren: () => import('../../page/feed/detail/detail.module').then(m => m.DetailModule),
+    canLoad: [AuthGuard]
   },
-  { 
-    path: 'edit', component: EditComponent
+  {
+    path: 'edit',
+    loadChildren: () => import('../../page/feed/edit/edit.module').then(m => m.EditModule),
+    canLoad: [AuthGuard]
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

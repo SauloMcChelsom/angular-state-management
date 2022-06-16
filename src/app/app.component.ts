@@ -35,4 +35,16 @@ export class AppComponent {
       }
     });
   }
+
+  /**
+   * em modo mobile, quando o menu lateral for clicado, oculta e mostra a tela referente aquele menu
+   */
+  public sideNavClose(){
+    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+      if (res.matches) {
+        this.sidenav.mode = 'over';
+        this.sidenav.close();
+      }
+    })
+  }
 }
