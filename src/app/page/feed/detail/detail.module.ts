@@ -14,8 +14,6 @@ import { BookStoreEffects } from '../store/index.effects';
 import { bookReducer } from '../store/index.reducers'
 import { Service } from '../store/index.service'
 
-import { ListGuard } from '@app/core/guards/list-guard.service'
-
 import { DetailComponent } from './detail.component'
 import { DetailRoute } from './detail.route'
 
@@ -43,7 +41,7 @@ const Modules = [
     StoreModule.forFeature('bookStore', bookReducer),
     EffectsModule.forFeature([BookStoreEffects])
   ],
-  providers: [Service, ListGuard],
+  providers: [Service],
   bootstrap: [],
   exports: [
     ...Components

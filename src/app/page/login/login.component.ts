@@ -80,11 +80,12 @@ export class LoginComponent {
 		this.indexService.signInWithEmailAndPasswordJwtLocal(this.email?.value, this.password?.value).subscribe((res: any) => {
       this.localStorageToken.setItem(res)
       this.authService.setUserLoggedIn()
-      this.authService.getUser(res.access_token, res.refresh_token.token).subscribe((user:any)=>{
+      this.authService.getUser().subscribe((user:any)=>{
         this.localStorageUser.setItem(user.results[0])
         this.router.navigate([this.authService.getRedirectUrl()])
       })
 		},(e:HttpErrorResponse)=>{
+      console.log('-->',e)
       this.openSnackBar(e.error.message)
     })
 	}

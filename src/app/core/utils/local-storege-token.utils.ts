@@ -5,6 +5,14 @@ export class LocalStorageTokenUtils {
         return JSON.parse(getItem)
     }
 
+    public getAuthToken(){
+        const token = this.getItem()
+        if(token){
+            return token.access_token
+        }
+        return null
+    }
+
     public setItem(item){
         localStorage.setItem('token', JSON.stringify(item))
     }

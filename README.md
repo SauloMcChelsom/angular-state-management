@@ -5,3 +5,13 @@ canLoad é usado para evitar que o aplicativo carregue módulos inteiros lentame
 CanActivate - Decide se uma rota pode ser ativada, este guarda pode não ser o melhor caminho para módulos de recursos que são carregados com preguiça, pois esse guarda sempre carregará o módulo na memória, mesmo se o guarda retornar falso, o que significa que o usuário não está autorizado a acessar o percurso.
 
 CanLoad - Decide se um módulo pode ser carregado lentamente, Controla se uma rota pode ser carregada. Isso se torna útil para módulos de recursos que são carregados lentamente. Eles nem carregarão se o guarda retornar falso.
+
+angular guard
+angular interceptor
+angular directive
+angular pipe
+angular Providers
+angular Lifecycle
+angular Lazy-loading
+angular NgZones
+helpers vs utils	  

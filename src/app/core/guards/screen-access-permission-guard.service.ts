@@ -3,12 +3,12 @@ import { CanLoad } from '@angular/router'
 
 
 @Injectable()
-export class ListGuard implements CanLoad {
+export class ScreenAccessPermissionGuard implements CanLoad {
 
   constructor() {}
 
   canLoad() {
-    return false
+    return true
   }
 
 }

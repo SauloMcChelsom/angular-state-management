@@ -22,8 +22,8 @@ export class Service {
     }
  
     updateBook(book:Comment) {
-        const {user_id, id, ...result} = book
-        return this.http.put<ResponseSuccess>(API+`/v1/public/comment/${book.id}/user/${book.user_id}`, result).pipe(map(result=>result))
+        const {id,user_id, publication_id, timestamp,  ...result} = book
+        return this.http.put<ResponseSuccess>(API+`/v1/private/comment/${book.id}`, result).pipe(map(result=>result))
     }
  
     deleteBook(comment:Comment) {

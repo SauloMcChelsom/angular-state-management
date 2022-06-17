@@ -24,35 +24,15 @@ export class AuthService {
 
 	constructor(private http: HttpClient) {}
 
-	public isValidToken(access_token:string, refresh_token:string){
-		const headers = new HttpHeaders({
-		  'authorization': 'Bearer '+access_token,
-		  'Accept': 'application/json',
-		  'Content-Type': 'application/json',
-		  'user_agent': window.navigator.userAgent,
-		  'window_screen_width': screen.width.toString(),
-		  'window_screen_height': screen.height.toString(),
-		  'window_screen_color_depth': screen.colorDepth.toString(),
-		  'window_screen_pixel_depth': screen.pixelDepth.toString(),
-		});
+	public isValidToken(refresh_token:string){
 		const body = {
 			refresh_token:refresh_token,
 		}
-	    return this.http.post(API+`/v1/private/auth/valid-token`, body, {headers: headers}).pipe(map(result=>result))
+	    return this.http.post(API+`/v1/private/auth/valid-token`, body).pipe(map(result=>result))
     }
 
-	public getUser(access_token:string, refresh_token:string){
-		const headers = new HttpHeaders({
-		  'authorization': 'Bearer '+access_token,
-		  'Accept': 'application/json',
-		  'Content-Type': 'application/json',
-		  'user_agent': window.navigator.userAgent,
-		  'window_screen_width': screen.width.toString(),
-		  'window_screen_height': screen.height.toString(),
-		  'window_screen_color_depth': screen.colorDepth.toString(),
-		  'window_screen_pixel_depth': screen.pixelDepth.toString(),
-		});
-	    return this.http.get(API+`/v1/private/user/find-by-acess-token`, {headers: headers}).pipe(map(result=>result))
+	public getUser(){
+	    return this.http.get(API+`/v1/private/user/find-by-acess-token`).pipe(map(result=>result))
     }
 
 	/**
@@ -113,7 +93,7 @@ export class AuthService {
 		  return false
 		}
 		const item = this.localStorageToken.getItem()
-		let valid = await this.isValidToken(item.access_token, item.refresh_token.token).toPromise().then((res:any) => {
+		let valid = await this.isValidToken(item.refresh_token.token).toPromise().then((res:any) => {
 			this.setUserLoggedIn()
 			if(res.code){
 				return true
