@@ -10,6 +10,9 @@ import { EditCommentModule } from '@app/shared/comment/edit-comment/edit-comment
 import { DetailCommentModule } from '@app/shared/comment/detail-comment/detail-comment.module'
 import { ZippyBasicModule } from '@app/shared/app-zippy-basic/zippy-basic.module'
 
+import { BackGroundDirective } from '@app/core/directives/back-ground.directive'
+import { NgIfDirective } from '@app/core/directives/ng-if.directive'
+
 import { BookStoreEffects } from './store/index.effects';
 import { bookReducer } from './store/index.reducers'
 import { Service } from './store/index.service'
@@ -27,6 +30,8 @@ const Components = [
   FeedComponent,
   ListComponent,
   CreateComponent,
+  BackGroundDirective,
+  NgIfDirective
 ]
 
 const Modules = [

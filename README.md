@@ -8,10 +8,10 @@ CanLoad - Decide se um módulo pode ser carregado lentamente, Controla se uma ro
 
 angular guard
 angular interceptor
-angular directive
+angular Lazy-loading
+angular directive -> attribute, element e class
 angular pipe
 angular Providers
 angular Lifecycle
-angular Lazy-loading
 angular NgZones
 helpers vs utils	  

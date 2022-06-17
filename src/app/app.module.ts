@@ -8,10 +8,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools'
 import { EffectsModule } from '@ngrx/effects'
 import { StoreModule } from '@ngrx/store'
 
-import { AuthGuard } from '@app/core/guards/auth-guard.service'
-import { ScreenAccessPermissionGuard as ScreenGuard } from '@app/core/guards/screen-access-permission-guard.service';
+import { AuthGuard } from '@app/core/guards/auth.guard'
+import { ScreenAccessPermissionGuard as ScreenGuard } from '@app/core/guards/screen-access-permission.guard';
 import { AuthService } from '@app/core/services/auth.service'
-import { AuthInterceptorService } from '@app/core/interceptor/auth-interceptor.service'
+import { AuthInterceptorService } from '@app/core/interceptor/auth.interceptor'
 import { LocalStorageTokenUtils } from '@app/core/utils/local-storege-token.utils';
 
 import { AngularMaterialModule } from '@theme/angular-material.module'

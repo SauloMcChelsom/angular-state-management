@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FeedComponent } from './feed.component';
 
-import { AuthGuard } from '@app/core/guards/auth-guard.service';
-import { ScreenAccessPermissionGuard as ScreenGuard } from '@app/core/guards/screen-access-permission-guard.service';
+import { AuthGuard } from '@app/core/guards/auth.guard';
+import { ScreenAccessPermissionGuard as ScreenGuard } from '@app/core/guards/screen-access-permission.guard';
 
 const routes: Routes = [
   {

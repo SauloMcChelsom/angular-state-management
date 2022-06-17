@@ -13,6 +13,25 @@
   </app-zippy-basic>
 
 
+  <b>exemplo de diretiva</b>
+  <div>
+    <input type="radio" name="colors" (click)="color='Green'">Green
+    <input type="radio" name="colors" (click)="color='black'">black
+    <input type="radio" name="colors" (click)="color='Cyan'">Cyan
+  </div>
+  <p [colorYellow]="color">Highlight me!</p>
+
+  <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+  show = {{show}}
+  <br>
+  <div *ngIf="show">Text to show</div>
+
+  <h3>if custom - estrutural</h3>
+  <button (click)="condition = !condition">Click</button>
+  <h2 *ngif="condition">Hello {{name}}</h2>
+
+
+
 </div>
 
 <div class="container">
