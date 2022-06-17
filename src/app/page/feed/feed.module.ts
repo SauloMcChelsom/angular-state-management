@@ -12,6 +12,7 @@ import { ZippyBasicModule } from '@app/shared/app-zippy-basic/zippy-basic.module
 
 import { BackGroundDirective } from '@app/core/directives/back-ground.directive'
 import { NgIfDirective } from '@app/core/directives/ng-if.directive'
+import { NgxtForDirective } from '@app/core/directives/ng-for.directive'
 
 import { BookStoreEffects } from './store/index.effects';
 import { bookReducer } from './store/index.reducers'
@@ -31,7 +32,8 @@ const Components = [
   ListComponent,
   CreateComponent,
   BackGroundDirective,
-  NgIfDirective
+  NgIfDirective,
+  NgxtForDirective
 ]
 
 const Modules = [

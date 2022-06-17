@@ -30,6 +30,20 @@
   <button (click)="condition = !condition">Click</button>
   <h2 *ngif="condition">Hello {{name}}</h2>
 
+  <h3>for custom - estrutural</h3>
+  <button (click)="toggleShow()">Show List</button>
+  <button (click)="mutateLongList()">Replace First Item</button>
+  <button (click)="addToLongList()">Add To Long List</button>
+  <button (click)="reassignLongList()">Reassign Long List</button>
+  <button (click)="removeFirstItem()">Remove First Item</button>
+  <ul>
+    <li *ngxtFor="
+        let item of longList; 
+        itemsAtOnce: 50;
+        intervalLength: 5">
+     Item - {{item.id}}
+    </li>
+  </ul>
 
 
 </div>
