@@ -3,7 +3,6 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 @Directive({
     selector: '[ngif]'
 })
-
 export class NgIfDirective {
 
     constructor(
