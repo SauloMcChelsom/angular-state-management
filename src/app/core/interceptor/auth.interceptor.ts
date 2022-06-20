@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {  HttpEvent,  HttpInterceptor,  HttpHandler, HttpRequest, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError, catchError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { LocalStorageTokenUtils } from '@app/core/utils/local-storege-token.utils';
 
 @Injectable()
@@ -27,17 +27,6 @@ export class AuthInterceptorService implements HttpInterceptor {
             });
         }
     
-        return next.handle(request).pipe(
-            
-            catchError((err) => {
-                console.log(err)
-                if (err instanceof HttpErrorResponse) {
-                    if (err.status === 401) {
-                    // redirect user to the logout page
-                    }
-                }
-                return throwError(() => new Error('test'))
-            })
-        )
+        return next.handle(request)
     }
 }
