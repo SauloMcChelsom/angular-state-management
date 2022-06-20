@@ -12,6 +12,9 @@ angular module
 angular component
 helpers vs utils	  
 
+## NgZone
+NgZone nos permite executar explicitamente determinado código fora da zona do Angular.
+os manipuladores(metodos...) ainda serão executados, mas como eles não serão executados dentro da Zona do Angular, o Angular não será notificado de que uma tarefa foi concluída e, portanto, nenhuma detecção de alteração será realizada.
 
 ## Providers
 Os provedores são apenas a instância do serviço.
