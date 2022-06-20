@@ -12,6 +12,12 @@ angular module
 angular component
 helpers vs utils	  
 
+## angular Dependency injection
+Quando um serviço depende de outro serviço, precisamos definir essa classe como @Injectable()
+
+## @Injectable() @NgModule() @Component() @Pipe() @Directive()
+
+
 ## NgZone
 NgZone nos permite executar explicitamente determinado código fora da zona do Angular.
 os manipuladores(metodos...) ainda serão executados, mas como eles não serão executados dentro da Zona do Angular, o Angular não será notificado de que uma tarefa foi concluída e, portanto, nenhuma detecção de alteração será realizada.
