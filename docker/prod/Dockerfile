@@ -28,7 +28,8 @@ RUN rm package-lock.json
 RUN rm tsconfig.json
 RUN rm README.md          
 RUN rm karma.conf.js  
-RUN rm npm           
+RUN rm npm      
+RUN rm server.js     
 RUN rm package.json       
 RUN rm tsconfig.app.json  
 RUN rm tsconfig.spec.json
