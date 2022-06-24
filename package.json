@@ -6,7 +6,7 @@
     "start": "node server.js",
     "postinstall": "ng build",
     "build": "ng build",
-    "dev": "ng serve --open --host=0.0.0.0 --port=5999 --disable-host-check",
+    "dev": "ng serve --open --host=0.0.0.0 --port=8080",
     "test": "ng test"
   },
   "engines": {
