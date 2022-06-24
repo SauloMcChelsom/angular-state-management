@@ -23,10 +23,8 @@ RUN npm i
 RUN rm -rf node_modules/
 RUN rm -rf docker/dev/
 RUN rm -rf src/
-RUN rm Dockerfile  
 RUN rm angular.json            
-RUN rm package-lock.json  
-RUN rm server.js          
+RUN rm package-lock.json           
 RUN rm tsconfig.json
 RUN rm README.md          
 RUN rm karma.conf.js  
