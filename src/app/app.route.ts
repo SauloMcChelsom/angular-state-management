@@ -16,6 +16,10 @@ export const ROUTES: Routes = [
     loadChildren: () => import('./page/feed/feed.module').then(m => m.FeedModule),
   },
   {
+    path: 'learn-angular',
+    loadChildren: () => import('./page/learn-angular/learn-angular.module').then(m => m.LearnAngularModule),
+  },
+  {
     path: 'components',
     loadChildren: () => import('./shared/angular-material-ui-component/angular-material-ui.module').then(m => m.AngularMaterialUIModule),
   },
